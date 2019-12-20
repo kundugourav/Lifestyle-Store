@@ -1,0 +1,283 @@
+<?php
+require 'common.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Product | Lifestyle Store</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <!--bootstrap stylesheet-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <!--glyphicon stylesheet-->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/glyphicon.css">
+    <!--internal stylesheet-->
+	<link rel="stylesheet" type="text/css" href="product 1.css">
+</head>
+<body>
+
+	<!--navbar-->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<a href="index 1.php" class="navbar-brand ml-md-5 pr-3 pl-3">Lifestyle Store</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-collapse" aria-controls="nav-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  	</button>
+
+
+
+  	<div class="collapse navbar-collapse" id="nav-collapse"><hr>
+		<ul class="navbar-nav ml-md-auto mr-md-5">
+			<li class="nav-item pr-3 pl-3">
+				<a href="cart 1.php" class="nav-link"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
+			</li>
+			<li class="nav-item pr-3 pl-3">
+				<a href="settings 1.php" class="nav-link"><span class="glyphicon glyphicon-cog"></span> Settings</a>
+			</li>
+      <li class="nav-item pr-3 pl-3">
+        <a href="logout 1.php" class="nav-link"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+      </li>
+		</ul>
+		</div>
+	</nav>
+	<!--navbar end-->
+
+  <!-- <div class="alert alert-success alert-dismissible" role="alert">
+  Log in successful!
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  </div> -->
+
+  <?php
+    if (isset($_SESSION['id'])) {
+      echo "<br><br><br><br><br><br>" . "<center><h1>Welcome User</h1></center>";
+    }
+    else {
+      echo "<br><br><br><br><br><br>" . "<center><h1>Hello Guest</h1></center>";
+    }
+  ?>
+
+  <!--body start-->
+	<div class="container" id="division">
+		<div class="jumbotron" id="jumbo">
+			<h1 class="font-weight-bold" style="font-size: 68px;">Welcome to our Llifestyle Store!</h1>
+    		<p style="font-size: 21px;">We have the best cameras, watches and shirts for you.No need to hunt around,we have all in one place.</p>
+		</div>
+		<hr>
+		<div class="card-deck" id="camera">
+				  <div class="col-lg-3 col-md-6">
+    				<img src="image/1.jpg" class="card-img-top img-thumbnail">
+    				<div class="card-body surround">
+  					 	<h4 class="card-title font-weight-bold" style="text-align: center;">Cannon EOS</h4>
+   						<p class="card-text font-weight-bold" style="text-align: center;">Price Rs. 36000.00</p>
+   						<a href="login 1.php" class="btn btn-primary btn-block">
+              <?php
+                if(isset($_SESSION['id'])){
+                  echo "Buy Now";
+                }else{
+                  echo "Add to Cart";
+                }
+              ?>
+              </a>
+ 					 </div>
+    			</div>
+    			<div class="col-lg-3 col-md-6">
+    				<img src="image/2.jpg" class="card-img-top img-thumbnail">
+    				<div class="card-body surround">
+  					 	<h4 class="card-title font-weight-bold" style="text-align: center;">Nikon EOS</h4>
+   						<p class="card-text font-weight-bold" style="text-align: center;">Price Rs. 40000.00</p>
+   						<a href="login 1.php" class="btn btn-primary btn-block">
+              <?php
+                if(isset($_SESSION['id'])){
+                  echo "Buy Now";
+                }else{
+                  echo "Add to Cart";
+                }
+              ?>
+              </a>
+ 					 </div>
+    			</div>
+    			<div class="col-lg-3 col-md-6">
+    				<img src="image/3.jpg" class="card-img-top img-thumbnail">
+    				<div class="card-body surround">
+  					 	<h4 class="card-title font-weight-bold" style="text-align: center;">Sony DSLR</h4>
+   						<p class="card-text font-weight-bold" style="text-align: center;">Price Rs. 50000.00</p>
+   						<a href="login 1.php" class="btn btn-primary btn-block">
+              <?php
+                if(isset($_SESSION['id'])){
+                  echo "Buy Now";
+                }else{
+                  echo "Add to Cart";
+                }
+              ?>
+              </a>
+ 					 </div>
+    			</div>
+    			<div class="col-lg-3 col-md-6">
+    				<img src="image/4.jpg" class="card-img-top img-thumbnail">
+    				<div class="card-body surround">
+  					 	<h4 class="card-title font-weight-bold" style="text-align: center;">Olympus DSLR</h4>
+   						<p class="card-text font-weight-bold" style="text-align: center;">Price Rs. 80000.00</p>
+   						<a href="login 1.php" class="btn btn-primary btn-block">
+              <?php
+                if(isset($_SESSION['id'])){
+                  echo "Buy Now";
+                }else{
+                  echo "Add to Cart";
+                }
+              ?>
+              </a>
+ 					 </div>
+    			</div>
+		</div>
+		<div class="card-deck mt-3" id="watch">
+				<div class="col-lg-3 col-md-6">
+    				<img src="image/5.jpg" class="card-img-top img-thumbnail">
+    				<div class="card-body surround">
+  					 	<h4 class="card-title font-weight-bold" style="text-align: center;">Titan Model #301</h4>
+   						<p class="card-text font-weight-bold" style="text-align: center;">Price Rs. 13000.00</p>
+   						<a href="login 1.php" class="btn btn-primary btn-block">
+              <?php
+                if(isset($_SESSION['id'])){
+                  echo "Buy Now";
+                }else{
+                  echo "Add to Cart";
+                }
+              ?>
+              </a>
+ 					 </div>
+    			</div>
+    			<div class="col-lg-3 col-md-6" id="Watch">
+    				<img src="image/6.jpg" class="card-img-top img-thumbnail">
+    				<div class="card-body surround">
+  					 	<h4 class="card-title font-weight-bold" style="text-align: center;">Titan Model #201</h4>
+   						<p class="card-text font-weight-bold" style="text-align: center;">Price Rs. 3000.00</p>
+   						<a href="login 1.php" class="btn btn-primary btn-block">
+              <?php
+                if(isset($_SESSION['id'])){
+                  echo "Buy Now";
+                }else{
+                  echo "Add to Cart";
+                }
+              ?>
+              </a>
+ 					 </div>
+    			</div>
+    			<div class="col-lg-3 col-md-6">
+    				<img src="image/7.jpg" class="card-img-top img-thumbnail">
+    				<div class="card-body surround">
+  					 	<h4 class="card-title font-weight-bold" style="text-align: center;">HMT Milan</h4>
+   						<p class="card-text font-weight-bold" style="text-align: center;">Price Rs. 8000.00</p>
+   						<a href="login 1.php" class="btn btn-primary btn-block">
+              <?php
+                if(isset($_SESSION['id'])){
+                  echo "Buy Now";
+                }else{
+                  echo "Add to Cart";
+                }
+              ?>
+              </a>
+ 					 </div>
+    			</div>
+    			<div class="col-lg-3 col-md-6">
+    				<img src="image/8.jpg" class="card-img-top img-thumbnail">
+    				<div class="card-body surround">
+  					 	<h4 class="card-title font-weight-bold" style="text-align: center;">Faver Luba #111</h4>
+   						<p class="card-text font-weight-bold" style="text-align: center;">Price Rs. 18000.00</p>
+   						<a href="login 1.php" class="btn btn-primary btn-block">
+              <?php
+                if(isset($_SESSION['id'])){
+                  echo "Buy Now";
+                }else{
+                  echo "Add to Cart";
+                }
+              ?>
+              </a>
+ 					 </div>
+    			</div>
+		</div>
+    <div class="card-deck mt-3 mb-5" id="shirt">
+        <div class="col-lg-3 col-md-6" id="Shirt">
+            <img src="image/9.jpg" class="card-img-top img-thumbnail">
+            <div class="card-body surround">
+              <h4 class="card-title font-weight-bold" style="text-align: center;">H & W</h4>
+              <p class="card-text font-weight-bold" style="text-align: center;">Price Rs. 800.00</p>
+              <a href="login 1.php" class="btn btn-primary btn-block">
+              <?php
+                if(isset($_SESSION['id'])){
+                  echo "Buy Now";
+                }else{
+                  echo "Add to Cart";
+                }
+              ?>
+              </a>
+           </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <img src="image/10.jpg" class="card-img-top img-thumbnail">
+            <div class="card-body surround">
+              <h4 class="card-title font-weight-bold" style="text-align: center;">Luis Phil</h4>
+              <p class="card-text font-weight-bold" style="text-align: center;">Price Rs. 1000.00</p>
+              <a href="login 1.php" class="btn btn-primary btn-block">
+              <?php
+                if(isset($_SESSION['id'])){
+                  echo "Buy Now";
+                }else{
+                  echo "Add to Cart";
+                }
+              ?>
+              </a>
+           </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <img src="image/11.jpg" class="card-img-top img-thumbnail">
+            <div class="card-body surround">
+              <h4 class="card-title font-weight-bold" style="text-align: center;">Jhon Zok</h4>
+              <p class="card-text font-weight-bold" style="text-align: center;">Price Rs. 1500.00</p>
+              <a href="login 1.php" class="btn btn-primary btn-block">
+              <?php
+                if(isset($_SESSION['id'])){
+                  echo "Buy Now";
+                }else{
+                  echo "Add to Cart";
+                }
+              ?>
+              </a>
+           </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <img src="image/12.jpg" class="card-img-top img-thumbnail">
+            <div class="card-body surround">
+              <h4 class="card-title font-weight-bold" style="text-align: center;">Jhalsani</h4>
+              <p class="card-text font-weight-bold" style="text-align: center;">Price Rs. 1300.00</p>
+              <a href="login 1.php" class="btn btn-primary btn-block">
+              <?php
+                if(isset($_SESSION['id'])){
+                  echo "Buy Now";
+                }else{
+                  echo "Add to Cart";
+                }
+              ?>
+              </a>
+           </div>
+          </div>
+    </div>
+	</div>
+  <!--body end-->
+
+  <!--footer-->
+  <div class="text-center bg-dark text-white">
+      <p class="footer">Copyright © Lifestyle Store. All Rights Reserved | Contact Us: +91 90000 00000</p>
+    </div>
+  <!--footer end-->
+
+	<!--jquery-->
+	<script src="bootstrap/js/jquery.js"></script>
+    <!--javascript-->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
