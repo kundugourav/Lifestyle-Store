@@ -1,0 +1,31 @@
+.container .row{
+	text-align: left;
+	height: 700px;
+}
+hr{
+	color: rgb(80,80,80);
+	background-color: rgb(80,80,80);
+}
+form{
+	margin: 56px;
+	padding: 60px;
+}
+@media(max-width: 575px){
+	.mar{
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+@media(max-width: 767px){
+	.mar{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+.footer{
+	margin:0;
+	padding-top:15px;
+	padding-bottom:15px;
+}
